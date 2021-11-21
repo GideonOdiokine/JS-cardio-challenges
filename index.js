@@ -3,7 +3,7 @@
 // ex. reverseString('hello') === 'olleh'
 
 function reverseString(str) {
-    // return str.split('').reverse().join('')
+    return str.split('').reverse().join('')
     // const strArr = str.split('')
     // strArr.reverse();
     // return strArr.join('')
@@ -27,14 +27,18 @@ function reverseString(str) {
     // }
     // return revString;
 
-    let revString = "";
+    // let revString = "";
 
-    str.split("").forEach((text) => {
-        console.log(text)
-        revString = text + revString;
-        console.log({ text, revString })
-    })
-    return revString
+    // str.split("").forEach((text) => {
+    //     console.log(text)
+    //     revString = text + revString;
+    //     console.log({ text, revString })
+    // })
+    // return revString
+
+    // 
+
+    // return str.split('').reduce((revString, text) => text + revString, '');
 }
 
 
