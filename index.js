@@ -19,6 +19,14 @@ function reverseString(str) {
     //     revString = str[i] + revString;
     // }
     // return revString;
+
+    // 
+    let revString = "";
+    for (let char of str) {
+        revString = char + revString;
+    }
+    return revString;
+
 }
 
 
