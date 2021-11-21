@@ -20,13 +20,20 @@ function reverseString(str) {
     // }
     // return revString;
 
-    // 
-    let revString = "";
-    for (let char of str) {
-        revString = char + revString;
-    }
-    return revString;
+    //  using for loop high order
+    // let revString = "";
+    // for (let char of str) {
+    //     revString = char + revString;
+    // }
+    // return revString;
 
+    let revString = "";
+
+    str.split("").forEach(function (text) {
+        revString = text + revString;
+        console.log({ text, revString })
+    })
+    return revString
 }
 
 
