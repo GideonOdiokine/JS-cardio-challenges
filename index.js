@@ -29,7 +29,8 @@ function reverseString(str) {
 
     let revString = "";
 
-    str.split("").forEach(function (text) {
+    str.split("").forEach((text) => {
+        console.log(text)
         revString = text + revString;
         console.log({ text, revString })
     })
