@@ -48,11 +48,22 @@ function reverseString(str) {
 // ex. isPalindrome('racecar') === 'true', isPalindrome('hello') == false
 
 function isPalindrome(str) {
-    if (str === str.split('').reverse().join('')) {
-        return true
-    } else {
-        return false
+    // if (str === str.split('').reverse().join('')) {
+    //     return true
+    // } else {
+    //     return false
+    // }
+    let char = ""
+    for (let i = str.length - 1; i >= 0; i -= 1) {
+        char += str[i]
     }
+
+    // if (str === char) {
+    //     return true;
+    // } else {
+    //     return false
+    // }
+    // return str===char ? true : false
 }
 
 
@@ -61,14 +72,27 @@ function isPalindrome(str) {
 // Return an integer in reverse
 // ex. reverseInt(521) === 125
 
-function reverseInt(int) { }
+function reverseInt(int) { 
+ const reverseString = int.toString().split('').reverse().join('')
+ return parseInt(reverseString) * Math.sign(int);
+}
 
 
 
 // CHALLENGE 4: CAPITALIZE LETTERS
 // Return a string with the first letter of every word capitalized
 // ex. capitalizeLetters('i love javascript') === 'I Love Javascript'
-function capitalizeLetters(str) { }
+function capitalizeLetters(str) {
+    const strArr = str.toLowerCase().split(' ');
+    console.log(strArr)
+
+    for(let i =0; i< strArr.length; i++){
+        strArr[i]= strArr[i].substring(0,1).toUpperCase() + strArr[i].substring(1);
+    }
+
+    return strArr.join(' ');
+ }
+
 
 
 
@@ -86,6 +110,6 @@ function fizzBuzz() { }
 
 
 // Call Function
-const output = isPalindrome('noon');
+const output = capitalizeLetters('i love javascript');
 
 console.log(output);
